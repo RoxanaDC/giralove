@@ -99,6 +99,6 @@ h1 {
 @media (pointer: coarse) {
   /* pe mobil mărim puțin raza pentru ergonomie */
   .spot-overlay {
-    --r: 100px;
+    --r: 200px;
   }
 }
