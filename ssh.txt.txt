@@ -1,0 +1,40 @@
+https://openclassrooms.com/fr/courses/7162856-gerez-du-code-avec-git-et-github/7165726-travaillez-depuis-votre-depot-local-git
+
+
+SOLUȚIA 2 (mai „pro”, dar puțin mai lung): configurezi SSH
+1️⃣ Verifică dacă ai deja chei
+ls ~/.ssh
+
+
+Dacă NU vezi id_rsa sau id_ed25519 → nu ai cheie
+
+2️⃣ Creează o cheie SSH
+ssh-keygen -t ed25519 -C "emailul_tau@github.com"
+
+
+➡️ Enter, Enter, Enter
+
+3️⃣ Pornește ssh-agent
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+
+4️⃣ Copiază cheia publică
+cat ~/.ssh/id_ed25519.pub
+
+
+Copiază TOT ce apare
+
+5️⃣ Adaug-o în GitHub
+
+GitHub → Settings → SSH and GPG keys → New SSH key
+
+6️⃣ Test
+ssh -T git@github.com
+
+
+Dacă vezi:
+
+Hi USERNAME! You've successfully authenticated
+
+
+🎉 e rezolvat

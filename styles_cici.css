@@ -7,7 +7,7 @@ body {
 
   background-position: center;
   background-repeat: no-repeat;
-  font-family: cursive;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: rgb(255, 255, 255);
   position: relative;
   display: flex;
@@ -20,7 +20,10 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 10px 20px;
   border-radius: 10px;
-  display: inline-block;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .btn-mes-dessins {
@@ -32,7 +35,7 @@ body {
   font-size: 0.9rem;
   cursor: pointer;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-  font-family: cursive;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   position: fixed;
   top: 12px;
   right: 12px;
@@ -57,4 +60,16 @@ body {
   padding: 20px;
   box-sizing: border-box;
   backdrop-filter: blur(80px); /* efect feather */
+}
+
+@media only screen and (max-width: 600px) {
+  .message-coucou {
+    display: inline-block;
+  }
+  .custom-cursor {
+    display: none;
+  }
+  body {
+    background-size: 100% 100%; /* acoperă tot ecranul */
+  }
 }

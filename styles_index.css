@@ -7,7 +7,7 @@ body,
 .btn {
   height: 100%;
   margin: 0;
-  font-family: cursive;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /* conținut demo — înlocuiește cu site-ul tău */
@@ -37,7 +37,7 @@ h1 {
   background: rgba(236, 212, 0, 0.082);
   /* gradientul radial creează zona transparentă la coordonatele setate */
   /* raza lanternei */
-  --r: 300px; /* rază (300px diametru) */
+  --r: 400px; /* rază (400px diametru) */
   --x: 50vw;
   --y: 50vh;
   background-image: radial-gradient(

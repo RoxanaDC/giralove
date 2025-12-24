@@ -16,7 +16,10 @@
   <body>
     <div class="light_btn" aria-hidden="false">
       <button id="toggleBtn" class="btn" aria-pressed="true">
-        Allume la lumière si tu veux
+        <h3>
+          Allume la lumière si tu veux…<br />
+          mais n’oublie pas les ours polaires!
+        </h3>
       </button>
     </div>
 
@@ -26,9 +29,9 @@
     <main>
       <article>
         <div class="div-center">
-          <h1>
-            Qui est Giral❤ve? <br />
-            ... et qui sont les amies de Giral❤ve?<br />
+          <h1 class="intro">
+            Qui est Giralove? <br />
+            Et qui sont <br />les amies de Giralove?<br />
           </h1>
           <h2>Je te souhaite une agreable decouverte !</h2>
           <button onclick="location.href='about.html'" class="btn-centre, btn">
@@ -105,11 +108,12 @@
           enabled = !enabled;
           if (enabled) {
             overlay.style.display = '';
-            toggleBtn.textContent = 'Allume la lumière si tu veux';
+            toggleBtn.textContent =
+              '          Allume la lumière si tu veux… mais n’oublie pas les ours polaires!';
             toggleBtn.setAttribute('aria-pressed', 'true');
           } else {
             overlay.style.display = 'none';
-            toggleBtn.textContent = 'Lampe de poche';
+            toggleBtn.textContent = 'Lampe torche à dynamo';
             toggleBtn.setAttribute('aria-pressed', 'false');
           }
         });
