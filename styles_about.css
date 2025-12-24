@@ -23,6 +23,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
+  font-size: smaller;
 }
 
 body {
@@ -59,7 +60,7 @@ body {
   cursor: pointer;
   box-shadow: 1px 2px 5px #000000;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  position: fixed;
+  position: relative;
   bottom: 20px; /* la 20px de jos */
   right: 20px; /* la 20px de marginea dreaptă */
   z-index: 10001;

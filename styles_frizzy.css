@@ -15,15 +15,18 @@ body {
 }
 
 .message-coucou {
+  width: 400px;
+  height: 750px;
+
+  display: none;
   color: white;
   background-color: rgba(0, 0, 0, 0.8);
-
   padding: 10px 20px;
   border-radius: 10px;
-  display: none;
   align-items: center;
   justify-content: center;
   text-align: center;
+  font-size: smaller;
 }
 
 .btn-mes-dessins {
@@ -36,7 +39,7 @@ body {
   cursor: pointer;
   box-shadow: 1px 2px 5px #000000;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  position: fixed;
+  position: relative;
   bottom: 20px; /* la 20px de jos */
   right: 20px; /* la 20px de marginea dreaptă */
   z-index: 10001;
@@ -45,7 +48,7 @@ body {
 .custom-cursor {
   position: fixed;
   width: 400px;
-  height: 600px;
+  height: 650px;
   border-radius: 5%; /*face cursorul rotund la 50%*/
   background-color: rgba(0, 0, 0, 0.8);
   /* 0.5 semi-transparent */
@@ -74,6 +77,8 @@ body {
     display: none;
   }
   body {
-    background-size: 100% 100%; /* acoperă tot ecranul */
+    background-size: 100% 100%;
+    /* acoperă tot ecranul */
+    background-repeat: repeat;
   }
 }
