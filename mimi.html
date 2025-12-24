@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About me</title>
+    <!-- STYLES LINK-->
+    <link rel="stylesheet" href="styles_mimi.css" />
+  </head>
+  <body>
+    <h1 class="message-coucou"></h1>
+    <div class="custom-cursor" id="customCursor">
+      <h3>
+        Faites connaissance avec Mimi
+        <br />
+        La sage de cette histoire
+        <br />
+        <br />
+        Malgres les apparences
+        <br />
+        Mimi est d'une douceur totale
+        <br /><br />
+        Quand Giral❤ve reflechis vivement
+        <br />
+        A cette vie... A comment être mieux...
+        <br />
+        <br />
+        Et que son cou se noue parfois par manque des réponses
+        <br />
+        C'est Mimi qui l'écoute et qui lui pose des questions
+        <br />
+        Pour essayer de la sortir de cet impasse
+        <br /><br />
+        J’ai rencontré Mimi un jour par intermediare
+        <br /><br />
+        Il pleuvait fort à côté de Chatelet Les Halles
+        <br />
+        Et un cousin à elle se trouvait dans un livre
+        <br /><br />
+        Malgrès la pluie il était super occupé
+        <br />
+        Il voulait rendre au monde, une autre belle histoire
+        <br />
+        Et il m'a dit gentil que sa cousine
+        <br />
+        Aimerait elle aussi d'être utile
+        <br /><br />
+        J'ai fu ravie de faire sa connaissance
+        <br />
+        Et je ne peux pas le dire assez pour Giral❤ve!
+      </h3>
+      <script>
+        const cursor = document.getElementById('customCursor');
+
+        document.addEventListener('mousemove', (e) => {
+          cursor.style.left = `${e.clientX}px`;
+          cursor.style.top = `${e.clientY}px`;
+        });
+      </script>
+    </div>
+
+    <h1>
+      <button onclick="location.href='dora.html'" class="btn, btn-mes-dessins">
+        Une autre amie à Giralove
+      </button>
+
+      <button class="btn-mes-dessins"></button>
+    </h1>
+  </body>
+</html>

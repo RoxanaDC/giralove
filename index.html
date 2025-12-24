@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <!-- HEAD -->
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <!-- TITLE -->
+    <title>Spotlight mouse</title>
+
+    <!-- STYLES LINK-->
+    <link rel="stylesheet" href="styles_index.css" />
+  </head>
+
+  <!-- BODY -->
+  <body>
+    <div class="light_btn" aria-hidden="false">
+      <button id="toggleBtn" class="btn" aria-pressed="true">
+        Allume la lumière si tu veux
+      </button>
+    </div>
+
+    <div class="spot-overlay" id="spot"></div>
+
+    <!-- MAIN -->
+    <main>
+      <article>
+        <div class="div-center">
+          <h1>
+            Qui est Giral❤ve? <br />
+            ... et qui sont les amies de Giral❤ve?<br />
+          </h1>
+          <h2>Je te souhaite une agreable decouverte !</h2>
+          <button onclick="location.href='about.html'" class="btn-centre, btn">
+            La suite <br />c'est par ici!
+          </button>
+        </div>
+
+        <!-- adaugă conținutul real al site-ului aici -->
+      </article>
+    </main>
+
+    <script>
+      /*
+        Script simplu și performant:
+        - actualizează variabilele CSS --x și --y
+        - folosește requestAnimationFrame pentru a throttla evenimentele mouse/touch
+        - suport touch (atingere) -> folosește primul contact
+        - buton toggle pentru a dezactiva overlayul
+        - buton pentru ascunderea cursorului
+      */
+
+      (function () {
+        const overlay = document.getElementById('spot');
+        const toggleBtn = document.getElementById('toggleBtn');
+        const cursorBtn = document.getElementById('cursorBtn');
+        let enabled = true;
+        let hideCursor = false;
+
+        // coordonate urmărite
+        const pos = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+        let rafScheduled = false;
+
+        function updateOverlay() {
+          // setează variabilele CSS
+          overlay.style.setProperty('--x', pos.x + 'px');
+          overlay.style.setProperty('--y', pos.y + 'px');
+          rafScheduled = false;
+        }
+
+        function scheduleUpdate() {
+          if (!rafScheduled) {
+            rafScheduled = true;
+            requestAnimationFrame(updateOverlay);
+          }
+        }
+
+        function onMouseMove(e) {
+          pos.x = e.clientX;
+          pos.y = e.clientY;
+          scheduleUpdate();
+        }
+
+        function onTouchMove(e) {
+          if (e.touches && e.touches[0]) {
+            pos.x = e.touches[0].clientX;
+            pos.y = e.touches[0].clientY;
+            scheduleUpdate();
+          }
+        }
+
+        // listeners
+        window.addEventListener('mousemove', onMouseMove, { passive: true });
+        window.addEventListener('touchmove', onTouchMove, { passive: true });
+
+        // resize -> recalc centre if needed
+        window.addEventListener('resize', () => {
+          pos.x = Math.min(pos.x, window.innerWidth);
+          pos.y = Math.min(pos.y, window.innerHeight);
+          scheduleUpdate();
+        });
+
+        // Toggle overlay on/off
+        toggleBtn.addEventListener('click', () => {
+          enabled = !enabled;
+          if (enabled) {
+            overlay.style.display = '';
+            toggleBtn.textContent = 'Allume la lumière si tu veux';
+            toggleBtn.setAttribute('aria-pressed', 'true');
+          } else {
+            overlay.style.display = 'none';
+            toggleBtn.textContent = 'Lampe de poche';
+            toggleBtn.setAttribute('aria-pressed', 'false');
+          }
+        });
+
+        // Toggle cursor hide/show
+        cursorBtn.addEventListener('click', () => {
+          hideCursor = !hideCursor;
+          if (hideCursor) {
+            document.documentElement.classList.add('hide-cursor');
+            cursorBtn.textContent = 'Ascunde cursor: ON';
+            cursorBtn.setAttribute('aria-pressed', 'true');
+          } else {
+            document.documentElement.classList.remove('hide-cursor');
+            cursorBtn.textContent = 'Ascunde cursor';
+            cursorBtn.setAttribute('aria-pressed', 'false');
+          }
+        });
+
+        // Init: place overlay centre
+        scheduleUpdate();
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About me</title>
+    <!-- STYLES LINK-->
+    <link rel="stylesheet" href="styles_cici.css" />
+  </head>
+  <body>
+    <h3 class="message-coucou"></h3>
+
+    <!-- cursor cu textul meu-->
+
+    <div class="custom-cursor" id="customCursor">
+      <h3>
+        Faites connaissance avec Cici
+        <br /><br />
+        Une fleur dans sa trompe
+        <br />
+        une autre dans sa queue
+        <br />
+        et Giral❤ve, bien accrochée à son cou
+        <br /><br />
+        J’ai rencontré Cici un jour
+        <br />
+        en buvant tranquillement
+        <br />
+        une boisson pleine de mousse
+        <br /><br />
+        Dans la mousse collée
+        <br />
+        aux parois de mon verre
+        <br />
+        je l’ai vue
+        <br />
+        toute souriante
+        <br />
+        heureuse que son déguisement
+        <br />
+        ne la rende pas tout à fait invisible
+        <br />
+        <br />
+        Sur mon épaule gauche
+        <br />
+        Giral❤ve a tout vu
+        <br />
+        Curieuse comme toujours
+        <br />
+        Bienveillante comme personne d'autre
+        <br />
+        elle l’a adoptée aussitôt
+        <br /><br />
+        Depuis et comme des bonnes amies
+        <br />elles vivent plein d'aventures ensemble
+      </h3>
+      <script>
+        const cursor = document.getElementById('customCursor');
+
+        document.addEventListener('mousemove', (e) => {
+          cursor.style.left = `${e.clientX}px`;
+          cursor.style.top = `${e.clientY}px`;
+        });
+      </script>
+    </div>
+
+    <h1>
+      <button onclick="location.href='mimi.html'" class="btn, btn-mes-dessins">
+        Une autre amie à Giral❤ve
+      </button>
+
+      <button class="btn-mes-dessins"></button>
+    </h1>
+  </body>
+</html>

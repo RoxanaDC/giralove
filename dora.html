@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About me</title>
+    <!-- STYLES LINK-->
+    <link rel="stylesheet" href="styles_dora.css" />
+  </head>
+  <body>
+    <h1 class="message-coucou"></h1>
+    <div class="custom-cursor" id="customCursor">
+      <h3>
+        Faites connaissance avec Dora
+        <br />
+        Grande amatrice et cascadeuse à bicyclette
+        <br /><br />
+        En pédalant toujours à grande vitesse
+        <br />
+        il y a de grosses larmes qui coulent de ses yeux
+        <br /><br />
+        Quelle chance d’avoir une trompe si longue pour les recuperer
+        <br />
+        pour qu'elles ne tombent pas sur Giral❤ve !
+        <br /><br />
+        J’ai rencontré Dora un jour
+        <br />
+        Mon employeur venait de me laisser tomber
+        <br /><br />
+        Ce monde bruillant sans patience me rendait triste
+        <br /><br />
+        Dora m’est apparue d’abord comme une idée
+        <br />
+        celle d’une monstre douce
+        <br />
+        avec une longue trompe
+        <br />
+        de grands yeux gentils
+        <br />
+        en ayant sur son dos et sur sa queue
+        <br />
+        des boules arc-en-ciel,
+        <br />
+        comme mes meilleures amies
+        <br /><br />
+        Elle a toqué doucement
+        <br />
+        à la porte de mes pensées tristes
+        <br />
+        Et depuis, je l’ai laissée entrer
+        <br /><br />
+        La voilà donc
+        <br />
+        une autre amie proche de Giral❤ve
+      </h3>
+      <script>
+        const cursor = document.getElementById('customCursor');
+
+        document.addEventListener('mousemove', (e) => {
+          cursor.style.left = `${e.clientX}px`;
+          cursor.style.top = `${e.clientY}px`;
+        });
+      </script>
+    </div>
+
+    <h1>
+      <button
+        onclick="location.href='frizzy.html'"
+        class="btn, btn-mes-dessins"
+      >
+        Une autre amie à Giralove
+      </button>
+
+      <button class="btn-mes-dessins"></button>
+    </h1>
+  </body>
+</html>

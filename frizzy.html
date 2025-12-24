@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About me</title>
+    <!-- STYLES LINK-->
+    <link rel="stylesheet" href="styles_frizzy.css" />
+  </head>
+  <body>
+    <h1 class="message-coucou"></h1>
+    <div class="custom-cursor" id="customCursor">
+      <h3>
+        Ici je vous presente Frizzy
+        <br /><br />
+        Qui aime bien croquer des etoiles gris
+        <br />
+
+        Et qui cours vite chaque fois qu'elle arrive a attraper une
+        <br />
+        Comme si elle avait peur de quelquechose
+        <br /><br />
+        Giral❤ve a pris elle aussi cette habitude
+        <br />
+        De adorer manger des étoiles gris
+        <br />
+        Et de avoir un peu peur
+        <br />
+        Mais les rires qu'elles ont toutes les deux après...
+        <br />C'est juste fou!
+
+        <br /><br />
+        L'histoire de ma rencontre avec Frizzy ...
+        <br />
+        J'étais en train de returner chez moi
+        <br />
+        Un soir cette fois
+        <br />
+        Et je l'ai vu dans une tache imprecise
+        <br />
+        Mais très prècis, sur le quai de la gare du Vésinet
+        <br /><br />
+        Elle m'a offert un beau sourrire et un clin d'oeil
+        <br />
+        Moi j'ai été juste ravie de dessiner cette gigantesque fraise
+        <br />
+        Qui peux voler <br />
+        Et qui adore croquer des étoiles gris
+      </h3>
+      <script>
+        const cursor = document.getElementById('customCursor');
+
+        document.addEventListener('mousemove', (e) => {
+          cursor.style.left = `${e.clientX}px`;
+          cursor.style.top = `${e.clientY}px`;
+        });
+      </script>
+    </div>
+
+    <h1>
+      <button onclick="location.href='index.html'" class="btn, btn-mes-dessins">
+        Une autre amie à Giralove
+      </button>
+
+      <button class="btn-mes-dessins"></button>
+    </h1>
+  </body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About me</title>
+    <!-- STYLES LINK-->
+    <link rel="stylesheet" href="styles_about.css" />
+  </head>
+  <body>
+    <h3 class="message-coucou"></h3>
+
+    <!-- cursor cu textul meu-->
+    <div class="custom-cursor" id="customCursor">
+      <h3>
+        Avant de te parler de Giral❤ve
+        <br />
+        et de ses amies
+        <br /><br />
+        Je me présente : Roxana
+        <br />
+        observatrice créatrice rêveuse
+        <br /><br />
+        pas très adaptée
+        <br />
+        au <strong class="monde"> monde tel qu’il est… </strong> <br /><br />
+        Je dessine et j’écris
+        <br />
+        pour le saupoudrer
+        <br />
+        d’<strong class="monde">un peu de poésie</strong> <br />
+        en espérant que
+        <br />
+        cette poésie pénètre
+        <br />petit à petit
+        <br />
+        dans la <strong class="monde">structure plus profonde</strong>
+        <br />
+        <strong class="monde"> du monde tel qu’il est… </strong>
+        <br /><br />
+        <br />
+        Avec leurs immense tendresse
+        <br />
+        Giral❤ve et ses amies m’aident à rêver
+        <br /><br />
+        Je te souhaite de tout mon coeur
+        <br />
+        que tu decouvres
+        <br />
+        la poésie qui est en toi
+      </h3>
+      <script>
+        const cursor = document.getElementById('customCursor');
+
+        document.addEventListener('mousemove', (e) => {
+          cursor.style.left = `${e.clientX}px`;
+          cursor.style.top = `${e.clientY}px`;
+        });
+      </script>
+    </div>
+    <h1>
+      <button onclick="location.href='cici.html'" class="btn, btn-mes-dessins">
+        Giral❤ve et ses amies ... c'est par ici!
+      </button>
+
+      <button class="btn-mes-dessins"></button>
+    </h1>
+  </body>
+</html>
