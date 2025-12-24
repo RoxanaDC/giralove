@@ -75,7 +75,7 @@ h1 {
   border-radius: 6px;
   font-size: 0.9rem;
   cursor: pointer;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  box-shadow: 1px 2px 5px #000000;
 }
 .btn[aria-pressed='true'] {
   background: rgb(255, 255, 255);
