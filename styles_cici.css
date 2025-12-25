@@ -1,10 +1,10 @@
 body {
   margin: 0;
   height: 100vh;
-  background-image: url('images/cici.jpg');
+  background-image: url('images/cici.jpg'), url('images/cici_200.jpg');
 
-  background-size: 75% 100%; /* nu acoperă tot ecranul */
-  background-position: left;
+  background-size: 75% 100%, 500% 500%;
+  background-position: center center;
   background-repeat: no-repeat;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: rgb(255, 255, 255);
@@ -36,7 +36,7 @@ body {
   cursor: pointer;
   box-shadow: 1px 2px 5px #000000;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  position: relative;
+  position: fixed;
   bottom: 20px; /* la 20px de jos */
   right: 20px; /* la 20px de marginea dreaptă */
   z-index: 10001;
